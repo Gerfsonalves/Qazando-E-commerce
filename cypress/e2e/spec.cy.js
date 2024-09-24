@@ -5,6 +5,17 @@ describe('template spec', () => {
     cy.visit('https://automationpratice.com.br/')
   })
 
+
+  it('Cadastro', () => {
+    cy.get('.right_list_fix > :nth-child(2) > a').click()
+    cy.get('#user').type('José silva')
+    cy.get('#email').type('jose@gmail.com')
+    cy.get('#password').type('12345678')
+    cy.get('#btnRegister').click()
+    cy.get('#swal2-title').should('be.visible')
+      .should('have.text', 'Cadastro realizado!')
+  })
+
   it('Login sem email', () => {
     cy.get('.right_list_fix > :nth-child(1) > a').click()
     cy.get('#password.form-control').type('12345678')
@@ -29,10 +40,5 @@ describe('template spec', () => {
     cy.get('#swal2-title.swal2-title').should('be.visible')
       .should('have.text', 'Login realizado')
   })
-
-
-
-
-
 
 })
