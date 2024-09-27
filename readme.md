@@ -6,8 +6,8 @@
  <li>Login sem senha
  <li>Login com sucesso
  <hr>
- <h2>Teste 2</h2>
- <li>
+ <h2>Navegação</h2>
+ <li>Navegação no menu icon
  <hr>
  <h2>Teste 3</h2>
  <li>
