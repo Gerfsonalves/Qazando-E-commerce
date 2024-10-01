@@ -7,10 +7,11 @@
  <li>Login com sucesso
  <hr>
  <h2>Navegação</h2>
- <li>Navegação no menu icon
+ <li>Navegação no menu
+ <li>Pesquisa de produto
  <hr>
- <h2>Teste 3</h2>
- <li>
+ <h2>Carrinho</h2>
+ <li>Adicionar e verificar carrinho
 <hr>
  
  </p>
