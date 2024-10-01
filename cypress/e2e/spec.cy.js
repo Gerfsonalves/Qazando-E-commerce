@@ -65,4 +65,11 @@ describe('template spec', () => {
     cy.get('.logo > img').should('be.visible')
   })
 
+  it.only('Pesquisa de produto', () => {
+    cy.get(':nth-child(1) > .search_width > img').click()
+    cy.get('form > input').type("Skate Dress")
+    cy.get('.btn').click()
+    cy.get('#swal2-title').should('be.visible')
+  })
+
 })
