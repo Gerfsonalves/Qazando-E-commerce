@@ -65,11 +65,24 @@ describe('template spec', () => {
     cy.get('.logo > img').should('be.visible')
   })
 
-  it.only('Pesquisa de produto', () => {
+  it('Pesquisa de produto', () => {
     cy.get(':nth-child(1) > .search_width > img').click()
     cy.get('form > input').type("Skate Dress")
     cy.get('.btn').click()
     cy.get('#swal2-title').should('be.visible')
+  })
+
+  it('Adicionar e verificar carrinho', () => {
+    cy.get(':nth-child(4) > .offcanvas-toggle > .fa').click()
+    cy.get(':nth-child(2) > #menuShopMenu').click()
+    cy.get(':nth-child(2) > :nth-child(1) > .mobile-sub-menu > :nth-child(1) > a').click()
+    cy.get(':nth-child(1) > .product_wrappers_one > .thumb > .image > .hover-image').click()
+    cy.get('.links_Product_areas > .theme-btn-one').click()
+    cy.get('#swal2-title').should('be.visible')
+    cy.wait(2000)
+    cy.get(':nth-child(3) > .offcanvas-toggle').click()
+    cy.contains('Shopping Cart').should('be.visible');
+
   })
 
 })
